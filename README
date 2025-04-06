@@ -1,0 +1,9 @@
+0. Allow user to select their default (known) language
+1. Allow user to search a song (or provide go-to songs) 
+2. Query Genius API to get the song id 
+3. Query Genius Song Lyrics API with the song id
+4. Retrieve the html of the lyrics in response
+5. Clean the html (be mindful of the unicodes)
+6. Display the lyrics
+    7. Query Google Translate API of each line of lyrics in user's default language
+    8. Display translated lyrics next to/underneath the original lyrics
