@@ -93,9 +93,9 @@ export default function Form() {
                 lyric_array.map((item, index) => {
                     if (item.includes('[') || item.includes(']') ) {
                         console.log(item)
-                        return( <div key={index}> <p></p> {item} </div> )
+                        return( <div key={index}> <p></p> {decodeURI(item)} </div> )
                     }
-                    return ( <div key={index}> {item} </div> )
+                    return ( <div key={index}> {decodeURI(item)} </div> )
                 })}
             </div>
         )
