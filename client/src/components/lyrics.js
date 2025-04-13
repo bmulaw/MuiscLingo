@@ -8,7 +8,7 @@ export default function Form() {
     const [apiLyrics, setApiLyrics] = useState("");
 
     async function tryAPI () {
-        await fetch('https://api.lyrics.ovh/v1/aventura/mi%20puerto%20rico')
+        await fetch('https://api.lyrics.ovh/v1/bad%20bunny/nuevayol')
         .then(res => res.json())
         .then(data => setApiLyrics(data.lyrics))
         
