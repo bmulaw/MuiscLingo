@@ -1,5 +1,5 @@
 import './css/App.css';
-import Form from './components/lyrics'
+import Lyric from './components/lyrics'
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <p>
           {"\u00f3n"}
-          <Form/>
+          <Lyric/>
         </p>
       </header>
     </div>

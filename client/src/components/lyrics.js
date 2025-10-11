@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import french_lyrics from '../example/es_lyrics.json'
 
-export default function Form() {
+export default function Lyric() {
     const [count, setCount] =  useState(0);
 
     const [isAventura, setIsAventura] =  useState(true);
@@ -15,6 +15,10 @@ export default function Form() {
         console.log("fetched bad bunny song");
     }
 
+    const translateLyric = (lyric) => {
+        
+    }
+
     function getHtml(givenLyrics) {
         let lyric = french_lyrics.song.description.html;
         if (!isAventura ) {
@@ -26,20 +30,18 @@ export default function Form() {
         
         let clean_lyric = lyric.replaceAll('<p>', '')
                             .replaceAll('</p>', '')
-                            .replaceAll('<br>', '')
-                            .replaceAll('<br/>', '')
                             .replaceAll('<i>', '')
                             .replaceAll('</i>', '')
-                            .replaceAll('<em>', '')
-                            .replaceAll('</em>', '')
-                            .replaceAll('</a>', '');
+                            .replaceAll('</a>', '')
+                            .replaceAll('&amp', '');
         let lyric_array = clean_lyric.split('<br>');
 
         return (
             <div> 
                 { 
-                lyric_array.map((item, index) => {
-                    return ( <div key={index}> {decodeURI(item)} </div> )
+                lyric_array.map((lyric, index) => {
+                    console.log('break (i)', index, " lyric is: ", lyric)
+                    return ( <div key={index}> {decodeURI(lyric)} </div> )
                 })}
             </div>
         );
@@ -56,10 +58,10 @@ export default function Form() {
   
     return (
         <div>
-        <div>{ getHtml(apiLyrics) }</div>
             <button onClick={handleClick}>
                 {isAventura ?  "Aventura" : "Bad Bunny"}
             </button>
+        <div>{ getHtml(apiLyrics) }</div>
         </div>
     );
 }
