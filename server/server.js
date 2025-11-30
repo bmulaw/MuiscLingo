@@ -9,11 +9,12 @@ const port = 3001;
 app.get('/translate', async (req, res) => {
     const url = 'https://lecto-translation.p.rapidapi.com/v1/translate/text'
     const sample_data = {
-                    "texts":["Me informan que te fuiste, como un loco te fui a alcanzar",
-                            "Te busqué y no te encontraba, y eso me preocupaba"],
-                    "to":["en"],
-                    "from":"es"
-                }
+        "texts":["Me informan que te fuiste, como un loco te fui a alcanzar",
+                "Te busqué y no te encontraba, y eso me preocupaba"],
+        "to":["en"],
+        "from":"es"
+    }
+
     axios({
         method: 'post',
         url: url,
