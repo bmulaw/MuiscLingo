@@ -15,8 +15,7 @@ export default function Lyric() {
         console.log("fetched bad bunny song");
     }
 
-    const translateLyric = (lyric) => {
-        
+    async function translateLyric(lyric) {
     }
 
     function getHtml(givenLyrics) {
