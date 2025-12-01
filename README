@@ -1,9 +1,6 @@
-0. Allow user to select their default (known) language
-1. Allow user to search a song (or provide go-to songs) 
-2. Query Genius API to get the song id 
-3. Query Genius Song Lyrics API with the song id
-4. Retrieve the html of the lyrics in response
-5. Clean the html (be mindful of the unicodes)
-6. Display the lyrics
-    7. Query Google Translate API of each line of lyrics in user's default language
-    8. Display translated lyrics next to/underneath the original lyrics
+0. User selects their learning language
+1. User looks up a song (or will be provided go-to songs) 
+2. We leverage Genius API to get the song lyrics 
+3. We leverage a Translate API of each line of lyrics in the learning language
+4. Display the original and the translated lyrics next to each other
+5. User learns the meaning of the songs and how to say it in their learning language :)
